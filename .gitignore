@@ -15,6 +15,7 @@ dataset/
 *.zip.part
 
 # Local Deployment Helpers
+push_sekarang.bat
 push_to_github.bat
 push_to_github.ps1
 push_with_pat.py
