@@ -1,6 +1,7 @@
 # RVL-CDIP Document AI & Decision Threshold Tuning
 ### Klasifikasi Multimodal Dokumen Bisnis & Mitigasi Risiko Finansial (Tugas 06 — Integrasi Menuju UTS)
 
+**Repositori Publik:** [https://github.com/Najip5/rvl-cdip-doc-classifier](https://github.com/Najip5/rvl-cdip-doc-classifier)  
 **Mata Kuliah:** Pembelajaran Mesin (S1 Informatika - 3 SKS)  
 **Kelas Gabungan:** KG.043.10.A (12.8A.10 & 12.8A.12)  
 **Dosen Pengampu:** Dr. Irwansyah Saputra, M.Kom. (NIP: 201909149)  
