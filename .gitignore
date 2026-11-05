@@ -1,0 +1,39 @@
+# Word & Assignment Reports (Local Documents)
+Tugas/
+script/
+*.docx
+*.doc
+*.pdf
+*.zip
+~$*
+test_img.docx
+
+# Large Raw Datasets (RVL-CDIP 9.8 GB external data)
+Dataset/
+dataset/
+*.tar.gz
+*.zip.part
+
+# Local Deployment Helpers
+push_to_github.bat
+push_to_github.ps1
+push_with_pat.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Temporary & Editor Files
+*.tmp
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

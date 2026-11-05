@@ -1,0 +1,140 @@
+{
+    "nama_kelompok": "Kelompok 05",
+    "instansi_studi_kasus": "PT Mobil Sejuta Umat (Dataset Benchmark RVL-CDIP Dokumen OCR)",
+    "tanggal_eksperimen": "05 November 2026",
+    "target_classes": [
+        "form",
+        "invoice",
+        "letter",
+        "memo"
+    ],
+    "optimal_decision_threshold_invoice": 0.35,
+    "default_model_metrics": {
+        "cv_5fold_f1_macro": 0.6775,
+        "test_accuracy": 0.7,
+        "test_f1_macro": 0.6934,
+        "test_f1_weighted": 0.6934
+    },
+    "tuned_optuna_model_metrics": {
+        "cv_5fold_f1_macro": 0.687,
+        "test_accuracy": 0.7063,
+        "test_f1_macro": 0.7017,
+        "test_f1_weighted": 0.7017,
+        "test_roc_auc_macro": 0.9012,
+        "invoice_pr_auc": 0.8148
+    },
+    "best_hyperparameters_optuna": {
+        "n_estimators": 225,
+        "max_depth": 16,
+        "min_samples_split": 9,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt"
+    },
+    "classification_report_per_class": {
+        "form": {
+            "precision": 0.6060606060606061,
+            "recall": 0.5,
+            "f1-score": 0.5479452054794521,
+            "support": 40.0
+        },
+        "invoice": {
+            "precision": 0.7441860465116279,
+            "recall": 0.8,
+            "f1-score": 0.7710843373493975,
+            "support": 40.0
+        },
+        "letter": {
+            "precision": 0.8333333333333334,
+            "recall": 0.875,
+            "f1-score": 0.8536585365853658,
+            "support": 40.0
+        },
+        "memo": {
+            "precision": 0.6190476190476191,
+            "recall": 0.65,
+            "f1-score": 0.6341463414634146,
+            "support": 40.0
+        },
+        "accuracy": 0.70625,
+        "macro avg": {
+            "precision": 0.7006569012382966,
+            "recall": 0.7062499999999999,
+            "f1-score": 0.7017086052194076,
+            "support": 160.0
+        },
+        "weighted avg": {
+            "precision": 0.7006569012382966,
+            "recall": 0.70625,
+            "f1-score": 0.7017086052194076,
+            "support": 160.0
+        }
+    },
+    "threshold_tuning_table": [
+        {
+            "threshold": 0.3,
+            "precision": 0.6957,
+            "recall": 0.8,
+            "f1_score": 0.7442,
+            "tp": 32,
+            "fp": 14,
+            "fn": 8,
+            "tn": 106,
+            "keterangan": "Recall maksimal, menekan False Negative secara ekstrem; siap eskalasi manual"
+        },
+        {
+            "threshold": 0.35,
+            "precision": 0.7381,
+            "recall": 0.775,
+            "f1_score": 0.7561,
+            "tp": 31,
+            "fp": 11,
+            "fn": 9,
+            "tn": 109,
+            "keterangan": "Ambang optimal bisnis: menekan FN tagihan luput dengan trade-off FP yang efisien"
+        },
+        {
+            "threshold": 0.4,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1_score": 0.75,
+            "tp": 30,
+            "fp": 10,
+            "fn": 10,
+            "tn": 110,
+            "keterangan": "Sensitif & seimbang, cocok untuk mitigasi dini risiko finansial"
+        },
+        {
+            "threshold": 0.5,
+            "precision": 0.7812,
+            "recall": 0.625,
+            "f1_score": 0.6944,
+            "tp": 25,
+            "fp": 7,
+            "fn": 15,
+            "tn": 113,
+            "keterangan": "Ambang default standar Scikit-Learn (netral tanpa pembobotan risiko)"
+        },
+        {
+            "threshold": 0.6,
+            "precision": 0.8571,
+            "recall": 0.45,
+            "f1_score": 0.5902,
+            "tp": 18,
+            "fp": 3,
+            "fn": 22,
+            "tn": 117,
+            "keterangan": "Konservatif, menekan False Alarm untuk otomatisasi batch invoice volume besar"
+        },
+        {
+            "threshold": 0.7,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4,
+            "tp": 10,
+            "fp": 0,
+            "fn": 30,
+            "tn": 120,
+            "keterangan": "Presisi sangat tinggi, meminimalkan salah bayar pada tagihan bernilai besar"
+        }
+    ]
+}
